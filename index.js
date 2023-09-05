@@ -1,7 +1,7 @@
 const http=require("http");
 const port=8080;
 const jsonData=require("./JsonData");
-// const jsonData=[
+
 //     {
 //       "id": 1,
 //       "name": "Leanne Graham",
@@ -234,9 +234,9 @@ const jsonData=require("./JsonData");
 //     }
 //   ];
 const app=http.createServer((req,res)=>{
-if(req.url=="/home"){
+if(req.url==="/home"){
     res.write("<html> <head> <title>Document</title>  <link rel=\"stylesheet\" href=\"./style.css\"></head> <body> <h1>what is Node js?</h1> <p>Node.js is an open-source, cross-platform JavaScript runtime environment and library for running web applications outside the client's browser. </p> <p>Developers use Node.js to create server-side web applications, and it is perfect for data-intensive applications since it uses an asynchronous, event-driven model.</p>   </body></html>");
-}else if(req.url=="/users"){
+}else if(req.url==="/users"){
     const data= JSON.stringify(jsonData);
     res.write(data);
 
